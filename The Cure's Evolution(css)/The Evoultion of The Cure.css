@@ -1,153 +1,125 @@
-h2 {border:5px solid #d63031;
-    margin:250px;
-    padding:50px;
-    box-shadow: 5px 10px #b2bec3;
-    background-image: url("../images/IMG_20190418_195931.gif");
-    background-position:top;
-    background-attachment: fixed;
-    color:#fdcb6e;
-    text-shadow: 2px 2px 4px #000000;
+/* === RESET & BASE === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body
-{
+body {
     font-family: 'Rubik', sans-serif;
     background-image: url("../images/2110vvp.jpeg");
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    color: #ecf0f1;
+    line-height: 1.6;
 }
 
-p
-{
-    font-size: 32px;
-    padding:50px;
-    text-shadow: 2px 2px 4px #000000;
-    color:#ecf0f1;
+/* === HR === */
+hr {
+    border: 3px solid #ecf0f1;
+    margin: 2rem auto;
+    width: 70%;
+    border-radius: 3px;
 }
 
-hr
-{
-    border: 5px solid #ecf0f1;
+/* === TITLURI === */
+h1 {
+    text-align: center;
+    color: #f5f6fa;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-h1
-{
-    color:#ecf0f1;
-    text-shadow: 2px 2px 4px #000000;
+h2 {
+    text-align: center;
+    border-bottom: 3px solid #d63031;
+    padding-bottom: 10px;
+    margin: 80px auto 40px auto;
+    font-size: 2rem;
+    color: #fdcb6e;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    max-width: 700px;
 }
 
-div.polaroid 
-{
-  width: 284px;
-  padding: 10px 10px 20px 10px;
-  border: 1px solid #BFBFBF;
-  background-color: white;
-  box-shadow: 10px 10px 5px #718093;
-  
+/* === PARAGRAFE === */
+p {
+    font-size: 22px;
+    text-align: center;
+    max-width: 650px;
+    margin: 30px auto;
+    color: #ffeaa7; /* galben pastel */
+    line-height: 1.5;
+    background: none; /* fără fundal */
+    padding: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+/* Al doilea paragraf italic */
+p:nth-of-type(2) {
+    font-style: italic;
+}
+
+/* Hover pentru paragrafe */
+p:hover {
+    color: #ffd32a; /* galben mai puternic */
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* === GALERIE POLAROID === */
 .wrapper {
-  width: 100%;
-  padding: 0 2rem;
-  text-align: center;
-}
-.polaroid {
-  background: #fff;
-  padding: 1rem;
-  box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
-  
-}
-.polaroid > img{
-  max-width: 100%;
-  height: auto;
-}
-.caption {
-  font-size: 1.8rem;
-  text-align: center;
-  line-height: 2em;
-}
-.item {
-  width: 30%;
-  display: inline-block;
-  margin-top: 2rem;
-  filter: grayscale(100%);
-}
-.item .polaroid:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  transition: all 0.35s;
-}
-.item:nth-of-type(4n+1) {
-  transform: scale(0.8, 0.8) rotate(5deg);
-  transition: all 0.35s;
-}
-.item:nth-of-type(4n+1) .polaroid:before {
-  transform: rotate(6deg);
-  height: 20%;
-  width: 47%;
-  bottom: 30px;
-  right: 12px;
-  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
-}
-.item:nth-of-type(4n+2) {
-  transform: scale(0.8, 0.8) rotate(-5deg);
-  transition: all 0.35s;
-}
-.item:nth-of-type(4n+2) .polaroid:before {
-  transform: rotate(-6deg);
-  height: 20%;
-  width: 47%;
-  bottom: 30px;
-  left: 12px;
-  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
-}
-.item:nth-of-type(4n+4) {
-  transform: scale(0.8, 0.8) rotate(3deg);
-  transition: all 0.35s;
-}
-.item:nth-of-type(4n+4) .polaroid:before {
-  transform: rotate(4deg);
-  height: 20%;
-  width: 47%;
-  bottom: 30px;
-  right: 12px;
-  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
-}
-.item:nth-of-type(4n+3) {
-  transform: scale(0.8, 0.8) rotate(-3deg);
-  transition: all 0.35s;
-}
-.item:nth-of-type(4n+3) .polaroid:before {
-  transform: rotate(-4deg);
-  height: 20%;
-  width: 47%;
-  bottom: 30px;
-  left: 12px;
-  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
-}
-.item:hover {
-  filter: none;
-  transform: scale(1, 1) rotate(0deg) !important;
-  transition: all 0.35s;
-}
-.item:hover .polaroid:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  transform: rotate(0deg);
-  height: 90%;
-  width: 90%;
-  bottom: 0%;
-  right: 5%;
-  box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
-  transition: all 0.35s;
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
 }
 
-p.caption
-{
-  color:#1e272e;
-  text-shadow: 2px 2px 4px #000000;
+.item {
+    width: 28%;
+    display: inline-block;
+    margin: 2rem 1%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(80%);
+    position: relative;
+}
+
+.item:hover {
+    transform: scale(1.05) rotate(0deg);
+    filter: grayscale(0%);
+    z-index: 2;
+}
+
+.polaroid {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.2);
+}
+
+.polaroid img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.caption {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #2d3436;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    margin-top: 0.5rem;
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 1024px) {
+    .item { width: 45%; }
+    p { max-width: 90%; font-size: 20px; }
+}
+
+@media (max-width: 600px) {
+    .item { width: 90%; }
+    h2 { font-size: 1.5rem; margin: 50px 1rem; }
+    p { font-size: 18px; }
 }

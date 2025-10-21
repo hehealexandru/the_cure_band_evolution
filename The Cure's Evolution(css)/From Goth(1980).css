@@ -1,167 +1,199 @@
-body
-{
-    background-image: url("../images/GracefulFrayedHoneycreeper-size_restricted.gif") ;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/GracefulFrayedHoneycreeper-size_restricted.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Assistant', sans-serif;
     color: #808e9b;
-    text-shadow: 2px 2px 4px #000000
+    text-shadow: 2px 2px 4px #000000;
+    line-height: 1.6;
 }
 
-hr
-{
- border: 5px solid grey;
+
+hr {
+    border: none;
+    height: 4px;
+    width: 80%;
+    margin: 2rem auto;
+    background: linear-gradient(90deg, #303952, #b33939);
+    border-radius: 2px;
 }
 
-h2
-{
+
+h1, h2, h4, pre, .caption, a {
     text-align: center;
-    border:5px solid #303952;
-    margin:250px;
-    padding:50px;
-    box-shadow: 5px 10px #b2bec3;
+    font-size: 90%;
+}
+
+
+h1 {
+    font-size: 2.8rem;
+    color: #dcdde1;
+    text-shadow: 2px 2px 5px #000;
+}
+
+h2 {
+    border: 5px solid #303952;
+    margin: 250px auto;
+    padding: 50px;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.4);
     background-image: url("../images/a-forest.gif");
     background-position: 75% 75%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     color: #b33939;
     text-shadow: 2px 2px 4px #000000;
+    border-radius: 12px;
+    max-width: 800px;
 }
 
-h1
-{
- text-align: center;
+h4 {
+    color: #c8d6e5;
 }
 
-p
-{
-    font-size: 32px;
-    padding:50px;
+p {
+    font-style: normal; /* italic doar la al doilea */
+    color: #d4af37; /* auriu elegant */
+    background: rgba(0, 0, 0, 0.55);
+    border-left: 5px solid #b33939;
+    padding: 25px 30px;
+    margin: 40px auto;
+    width: 60%;
+    font-size: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(172, 205, 74, 0.689);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 0.3s;
 }
 
-pre
-{
-    font-size: 25px
+
+p:nth-of-type(2) {
+    font-style: italic;
 }
 
-div.polaroid 
-{
-  width: 284px;
-  padding: 10px 10px 20px 10px;
-  border: 1px solid #BFBFBF;
-  background-color: white;
-  box-shadow: 10px 10px 5px #718093;
-  
+
+p:hover {
+    background: rgba(179, 57, 57, 0.25);
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(179, 57, 57, 0.6);
 }
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+pre {
+    font-size: 20px;
+    color: #dcdde1;
+}
+
 
 .wrapper {
-  width: 100%;
-  padding: 0 2rem;
-  text-align: center;
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
 }
-.polaroid {
-  background: #fff;
-  padding: 1rem;
-  box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
-  
-}
-.polaroid > img{
-  max-width: 100%;
-  height: auto;
-}
-.caption {
-  font-size: 1.8rem;
-  text-align: center;
-  line-height: 2em;
-}
+
 .item {
-  width: 30%;
-  display: inline-block;
-  margin-top: 2rem;
-  filter: grayscale(100%);
+    width: 30%;
+    display: inline-block;
+    margin-top: 2rem;
+    filter: grayscale(100%);
+    transition: all 0.35s;
+    position: relative;
 }
-.item .polaroid:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  transition: all 0.35s;
-}
-.item:nth-of-type(4n+1) {
-  transform: scale(0.8, 0.8) rotate(5deg);
-  transition: all 0.35s;
-}
-.item:nth-of-type(4n+1) .polaroid:before {
-  transform: rotate(6deg);
-  height: 20%;
-  width: 47%;
-  bottom: 30px;
-  right: 12px;
-  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
-}
-.item:nth-of-type(4n+2) {
-  transform: scale(0.8, 0.8) rotate(-5deg);
-  transition: all 0.35s;
-}
-.item:nth-of-type(4n+2) .polaroid:before {
-  transform: rotate(-6deg);
-  height: 20%;
-  width: 47%;
-  bottom: 30px;
-  left: 12px;
-  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
-}
-.item:nth-of-type(4n+4) {
-  transform: scale(0.8, 0.8) rotate(3deg);
-  transition: all 0.35s;
-}
-.item:nth-of-type(4n+4) .polaroid:before {
-  transform: rotate(4deg);
-  height: 20%;
-  width: 47%;
-  bottom: 30px;
-  right: 12px;
-  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
-}
-.item:nth-of-type(4n+3) {
-  transform: scale(0.8, 0.8) rotate(-3deg);
-  transition: all 0.35s;
-}
-.item:nth-of-type(4n+3) .polaroid:before {
-  transform: rotate(-4deg);
-  height: 20%;
-  width: 47%;
-  bottom: 30px;
-  left: 12px;
-  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
-}
+
 .item:hover {
-  filter: none;
-  transform: scale(1, 1) rotate(0deg) !important;
-  transition: all 0.35s;
+    filter: none;
+    transform: scale(1, 1) rotate(0deg);
+    z-index: 2;
 }
+
+.polaroid {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+    position: relative;
+    transition: all 0.35s ease;
+}
+
+.polaroid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.caption {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2em;
+    color: #e1b12c;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.item .polaroid:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition: all 0.35s;
+}
+
+.item:nth-of-type(4n+1) { transform: scale(0.8) rotate(5deg); }
+.item:nth-of-type(4n+2) { transform: scale(0.8) rotate(-5deg); }
+.item:nth-of-type(4n+3) { transform: scale(0.8) rotate(-3deg); }
+.item:nth-of-type(4n+4) { transform: scale(0.8) rotate(3deg); }
+
 .item:hover .polaroid:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  transform: rotate(0deg);
-  height: 90%;
-  width: 90%;
-  bottom: 0%;
-  right: 5%;
-  box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
-  transition: all 0.35s;
+    transform: rotate(0deg);
+    height: 90%;
+    width: 90%;
+    bottom: 0%;
+    right: 5%;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.3);
 }
 
-p.caption
-{
-  color:#1e272e;
-  text-shadow: 2px 2px 4px #000000;
-}
 
-a
-{
+a {
     font-family: 'Assistant', sans-serif;
-    text-shadow: 2px 2px 4px #000000
+    color: #e1b12c;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #b33939;
+}
+
+@media (max-width: 1024px) {
+    .item { width: 45%; }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; margin: 4rem 1rem; padding: 2rem; }
+    .item { width: 90%; }
+    p { font-size: 20px; padding: 1rem; width: 90%; }
 }
